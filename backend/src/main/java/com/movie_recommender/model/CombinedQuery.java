@@ -7,12 +7,15 @@ public class CombinedQuery {
     String genresQuery;
     String plotQuery;
 
-    public CombinedQuery(String relaseYearQuery, String titleQuery, String castQuery, String genresQuery, String plotQuery) {
+    int numOfHits;
+
+    public CombinedQuery(String relaseYearQuery, String titleQuery, String castQuery, String genresQuery, String plotQuery, int numOfHits) {
         this.relaseYearQuery = relaseYearQuery;
         this.titleQuery = titleQuery;
         this.castQuery = castQuery;
         this.genresQuery = genresQuery;
         this.plotQuery = plotQuery;
+        this.numOfHits = numOfHits;
     }
 
     public String getRelaseYearQuery() {
@@ -55,6 +58,14 @@ public class CombinedQuery {
         this.plotQuery = plotQuery;
     }
 
+    public int getNumOfHits() {
+        return numOfHits;
+    }
+
+    public void setNumOfHits(int numOfHits) {
+        this.numOfHits = numOfHits;
+    }
+
     @Override
     public String toString() {
         return "CombinedQuery{" +
@@ -63,6 +74,7 @@ public class CombinedQuery {
                 ", castQuery='" + castQuery + '\'' +
                 ", genresQuery='" + genresQuery + '\'' +
                 ", plotQuery='" + plotQuery + '\'' +
+                ", numOfHits=" + numOfHits +
                 '}';
     }
 }

@@ -97,10 +97,11 @@ public class MovieSearcher {
             builder.add(plotQuery, BooleanClause.Occur.MUST);
         }
 
+
         Query combinedQuery = builder.build();
         System.out.println(combinedQuery.toString());
 
-        TopDocs topDocs = indexSearcher.search(combinedQuery, Integer.MAX_VALUE);
+        TopDocs topDocs = indexSearcher.search(combinedQuery, cq.getNumOfHits());
         ScoreDoc[] hits = topDocs.scoreDocs;
         List<Movie> movies = new ArrayList<>();
 
@@ -133,7 +134,7 @@ public class MovieSearcher {
 //                System.out.println(movie);
 //            }
 
-            List<Movie> moviesWithGenre = movieSearcher.combinedSearch(new CombinedQuery("2012", "shark", "Charlie O'Connell", null, null));
+            List<Movie> moviesWithGenre = movieSearcher.combinedSearch(new CombinedQuery("2012", "shark", "Charlie O'Connell", null, null,30));
             for (Movie movie : moviesWithGenre){
                 System.out.println(movie);
             }
