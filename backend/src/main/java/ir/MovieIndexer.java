@@ -86,7 +86,7 @@ public class MovieIndexer {
 
     public static void main(String[] args) throws IOException {
 
-        MovieIndexer mi = new MovieIndexer("movies_index", true);
+        MovieIndexer mi = new MovieIndexer("backend\\movies_index", true);
         mi.indexMovieData("backend\\res\\wiki_movies.csv");
         mi.finishIndexing();
 
