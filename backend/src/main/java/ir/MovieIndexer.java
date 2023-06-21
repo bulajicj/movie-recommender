@@ -48,7 +48,7 @@ public class MovieIndexer {
         document.add(new TextField("title", movie.getTitle(), Field.Store.YES));
         document.add(new TextField("cast", movie.getCast(), Field.Store.YES));
         document.add(new TextField("genres", movie.getGenres(), Field.Store.YES));
-        document.add(new TextField("plot", movie.getPlot()));
+        document.add(new TextField("plot", movie.getPlot(), Field.Store.NO));
         document.add(new IntPoint("releaseYear", movie.getReleaseYear()));
         document.add(new StoredField("releaseYear", movie.getReleaseYear()));
         document.add(new StoredField("wikiPage", movie.getWikiPage()));
@@ -87,7 +87,7 @@ public class MovieIndexer {
     public static void main(String[] args) throws IOException {
 
         MovieIndexer mi = new MovieIndexer("movies_index", true);
-        mi.indexMovieData("res/wiki_movies.csv");
+        mi.indexMovieData("backend\\res\\wiki_movies.csv");
         mi.finishIndexing();
 
     }

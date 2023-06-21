@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MovieRecommenderApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Jovana Bulajic");
+
 		SpringApplication.run(MovieRecommenderApplication.class, args);
 	}
 

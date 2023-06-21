@@ -3,6 +3,7 @@ import com.movie_recommender.model.CombinedQuery;
 import com.movie_recommender.model.Movie;
 import ir.MovieSearcher;
 import org.apache.lucene.queryparser.classic.ParseException;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:8080/", allowCredentials = "true")
 public class SearchController {
+
     MovieSearcher ms;
 
     public SearchController() throws IOException {
