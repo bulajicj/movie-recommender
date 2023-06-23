@@ -70,7 +70,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>app.Application</mainClass>
+							<mainClass>com.movie_recommender.MovieRecommenderApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
