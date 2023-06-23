@@ -1,0 +1,27 @@
+version: '3.6'
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: backend-container
+    ports:
+      - 5000:5000
+    networks:
+      - backdb
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend-container
+    ports:
+      - 8080:80
+    depends_on:
+      - backend
+    networks:
+      - frontback
+
+networks:
+  backdb:
+    driver: bridge
+  frontback:
+    driver: bridge
