@@ -17,7 +17,7 @@ public class SearchController {
     MovieSearcher ms;
 
     public SearchController() throws IOException {
-        this.ms = new MovieSearcher("backend\\movies_index");
+        this.ms = new MovieSearcher("movies_index");
     }
 
     @GetMapping("/")
