@@ -24,7 +24,8 @@ Empty list if there are no movies that match the requirements(horror genre added
 ![Screenshot 2023-06-26 130724](https://github.com/bulajicj/movie-recommender/assets/135854133/af5d4422-1f2c-44bd-b092-db4befca9803)
 
 Search by genres:
-![image](https://github.com/bulajicj/movie-recommender/assets/135854133/a81fed86-9af2-4134-a171-738feab5ea6f)
+![image](https://github.com/bulajicj/movie-recommender/assets/135854133/2f75ad9d-0a75-41f2-9023-a35b156c4648)
+
 
 Search by actors: 
 ![Screenshot 2023-06-26 124633](https://github.com/bulajicj/movie-recommender/assets/135854133/43e1ab59-24a9-442c-b2ed-48e611a1e387)
